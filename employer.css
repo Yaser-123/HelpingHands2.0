@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+.big-div {
+    display: flex;
+    width: 70%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adjust as needed */
+    z-index: 1; /* Adjust as needed */
+    position: relative; /* Needed for z-index to work */
+    margin-left: 10%;
+    margin-right: 60%;
+    margin-top: 40px;
+    border: 2px solid #000; /* Change color as needed */
+    padding: 50px;
+    /* overflow:auto; */
+}
+
+.form-group {
+    display: flexbox;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    /* border: 2px solid #000; Change color as needed */
+    margin: 10px; /* Adjust as needed */
+    padding: 10px; /* Adjust as needed */
+    align-self: flex-start;
+    font-size:18px;
+}
+.candidate-button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.candidate-button:hover {
+    background-color: blue;
+    color: white;
+}
+.logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    float: right;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 
+}
