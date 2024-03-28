@@ -886,3 +886,18 @@
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
 }
+
+.swiper-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.swiper-slide img {
+  width: 80%;
+  height: auto;
+}
+
+.slider-wrapper {
+  max-width: 800px;
+
+}
