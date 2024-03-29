@@ -8,6 +8,8 @@ body {
     justify-content: center;
     height: 100vh;
     color: #333;
+    background:#3c5077 ;
+
  }
  
  .header {
@@ -62,6 +64,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
+    background-color: white;
  }
 
  
@@ -107,7 +110,13 @@ body {
    font-size: 16px;
    margin: 4px 2px;
    cursor: pointer;
+   transition: transform .2s; /* Animation */
+
 }
+.my-button:hover {
+   transform: scale(1.1); /* Zoom on hover */
+}
+
 .event:hover {
    background-color: lightblue;
 }
