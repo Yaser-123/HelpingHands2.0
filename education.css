@@ -1,5 +1,5 @@
 *{
-    background-color: rgb(224, 236, 248);
+    background-color: #E5F0FF;
 }
 .othercourses h2{
 
@@ -13,7 +13,7 @@
     justify-content: space-evenly;
     width:200px;
     height:50px;
-    background-color:rgb(116, 186, 247);
+    background-color:#4192dd;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -86,7 +86,7 @@
 .job-card button{
     float: right;
     width: 60px;
-    background-color:rgb(2, 98, 183);
+    background-color:#0060B9;
     color: white;
     border: none;
     border-radius: 5px;

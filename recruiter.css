@@ -8,7 +8,7 @@ body {
     justify-content: center;
     height: 100vh;
     color: #333;
-    background:#3c5077 ;
+    background: #E5F0FF ;
 
  }
  
@@ -45,6 +45,7 @@ body {
  }
  
  .profile span {
+   background-color:#E5F0FF;
     margin-left: 10px;
     color: #c0392b;
  }
@@ -86,7 +87,7 @@ body {
  
  .timeline .event span {
     margin-left: 10px;
-    color: #c0392b;
+    color: #042554;
  }
  
  .timeline .event button {
@@ -99,7 +100,7 @@ body {
  }
 
  .my-button {
-   background-color: #4CAF50; /* Green */
+   background-color: #0060B9; /* Green */
    border: 2px solid #000;
    border-radius: 12px;
    color: white;
