@@ -1,0 +1,109 @@
+*{
+    background-color: rgb(224, 236, 248);
+}
+.othercourses h2{
+
+    text-align: left;
+    margin-left: 10px;
+    font-size: 40px;
+}
+.othercourses button{
+    display:inline;
+    align-items: center;
+    justify-content: space-evenly;
+    width:200px;
+    height:50px;
+    background-color:rgb(116, 186, 247);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    
+}
+
+.section{
+    display: flex;
+    
+}
+.section h3{
+    margin-right: 3px;
+    margin-top: 30px;
+    margin-left: 449px;
+    font-size: 30px;
+}
+.section p{
+    color: rgb(130, 130, 130);
+    margin-top: 39px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.job-listings {
+    margin-top: 1px;
+    float: right;
+    width: 80%;
+}
+
+.job-listings ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.job-card {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.job-card a {
+    text-decoration: none;
+    color: black;
+}
+
+.job-card h3 {
+    margin-bottom: 5px;
+}
+
+.job-card .location,
+.job-card .job-type {
+    font-size: 0.8em;
+    color: #aaa;
+}
+.job-card button{
+    float: right;
+    width: 60px;
+    background-color:rgb(2, 98, 183);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, auto); /* Creates 5 columns for the buttons */
+    grid-gap: 10px; /* Sets a 10px gap between the buttons */
+}
+
+.buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
