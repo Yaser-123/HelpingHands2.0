@@ -723,7 +723,7 @@
   }
 }
 @media(max-width: 767px) {
-  .home-navbar-interactive {
+  .home-interactive {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
@@ -900,4 +900,34 @@
 .slider-wrapper {
   max-width: 800px;
 
+}
+
+.contact-us {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-us h2 {
+  margin-bottom: 20px;
+}
+
+.contact-us ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-us ul li {
+  margin-bottom: 10px;
+}
+
+.contact-us ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-us ul li a:hover {
+  color: #0056b3;
 }

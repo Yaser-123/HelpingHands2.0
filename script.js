@@ -25,4 +25,9 @@ function onSignIn(googleUser) {
     detectColorScheme();
   });
  
-    window.onscroll = function () { myFunction() };
+  
+
+    document.getElementById('submit-button').addEventListener('click', function() {
+      alert('Thanks');
+      window.location.href = 'recruiter.html';
+    });
