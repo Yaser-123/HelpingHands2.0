@@ -940,3 +940,13 @@ header {
 .logo{
   border-radius: 20%;
 }
+#google_translate_element{
+  margin-left: 20px; /* Add space to the left of the element */
+
+
+}
+#google_translate_element .goog-logo-link {
+  display: none !important;
+  opacity: 0.8; /* Decrease the opacity */
+    margin-top: 20px; 
+}
