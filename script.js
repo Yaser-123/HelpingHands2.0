@@ -31,3 +31,32 @@ function onSignIn(googleUser) {
       alert('Thanks');
       window.location.href = 'recruiter.html';
     });
+
+// for aside
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.querySelector(".openbtn").style.display = "none"; // Hide the hamburger button
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.querySelector(".openbtn").style.display = "block"; // Show the hamburger button
+}
+
+document.getElementById('survey-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you for filling the form, here is a list of jobs curated especially according to your skill set..');
+  window.location.href = 'listofjob.html';
+});

@@ -111,8 +111,17 @@ nav li {
     margin: 4px 2px;
     cursor: pointer; /* Mouse pointer on hover */
     transition-duration: 0.4s; /* Transition effect */
+    margin: 0 auto;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+
 }
 
 #submit-button:hover {
     background-color: #45a049; /* Green background on hover */
+}
+#submit-button {
+    display: block;
+    margin: 100 auto;
 }

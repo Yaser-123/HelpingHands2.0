@@ -26,7 +26,7 @@
                 <option value="no">No</option>
               </select>
               <label for="number" id="number-label">What is your expected salary range?</label>
-              <input id="number" type="number" min="5000" max="25000" required placeholder="Enter your range" />
+              <input id="number" type="number" required placeholder="Enter your range" />
       
               <label for="dropdown">What are your job requirements?</label>
               <select id="dropdown">
@@ -41,11 +41,11 @@
               <label for="comment">Do you have any other preferences or requirements for your desired job?</label>
               <textarea rows="4" cols="50" id="comment">Enter your comment here...</textarea>
       
-              <button type="submit" id="submit">Submit</button>
+              <button type="submit" id="submit" onclick="window.location.href='listofjob.html'" >Submit</button>
             </form>
           </div>
         </div>
       </div>
-    
+      <script src="script.js"></script>
 </body>
 </html>

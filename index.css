@@ -931,3 +931,12 @@
 .contact-us ul li a:hover {
   color: #0056b3;
 }
+
+
+header {
+  border-bottom: 2px solid black;
+}
+
+.logo{
+  border-radius: 20%;
+}

@@ -7,18 +7,30 @@
     <link rel="stylesheet" href="recruiter.css">
 </head>
 <body>
+    
+
     <h1>Candidates</h1>
-   <div class="header">
-    <button type="button" class="my-button">Search for jobs</button>
-    <button type="button" class="my-button">Filter by location</button>
-    <button type="button" class="my-button">Filter by status</button>
-    <button type="button" class="my-button">Filter by date</button>
-   </div>
+    <div class="flex-container">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.html">Home</a>
+            <a href="green.html">Logout</a>
+        </div>
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰ </button>  
+        </div>
+        
+        <button type="button" class="my-button">Search for jobs</button>
+        <button type="button" class="my-button">Filter by location</button>
+        <button type="button" class="my-button">Filter by status</button>
+        <button type="button" class="my-button">Filter by date</button>
+    </div>
   
    <div class="timeline">
     <div class="event">
         <!-- <img src="avatar.png" alt="Avatar"> -->
         <h2>Ankit</h2>
+       
         <span>Labourer</span>
         <button>Connect</button>
     </div>
@@ -58,5 +70,7 @@
            <p>2020/08/24 at 11:56 am</p>
        </div>
    </div>
+   <script src="script.js"></script>
+
 </body>
 </html>

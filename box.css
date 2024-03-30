@@ -60,7 +60,14 @@
     margin-bottom: 10px;
   }
   
+  button.edu {
+    width: 50%; /* Adjust this value to decrease the size of the button */
+    display: block; /* This will make the button a block element */
+    margin: 0 auto; /* This will center the button */
+  }
   fieldset {
+    width: 100%;
+    box-sizing: border-box;
     margin-top:2px;
     margin-bottom: 30px;
     border: none;
