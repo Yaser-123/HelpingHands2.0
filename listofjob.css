@@ -192,7 +192,7 @@ header {
 }
 
 .buttons button:hover {
-    background-color: blue;
+    background-color: #0060B9;
 }
 
 .dropdown_ham {
@@ -221,7 +221,7 @@ header {
 }
 
 .dropbtn {
-    background-color: blue;
+    background-color: #0060B9;
     color: white;
     padding: 16px;
     font-size: 16px;

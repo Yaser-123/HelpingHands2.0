@@ -1,5 +1,6 @@
 *{
-    margin: 0;
+    margin-top: 300x;
+    
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
@@ -7,7 +8,7 @@
 .container{
     width: 100%;
     height: 100vh;
-    background:#3c5077 ;
+    background:#E5F0FF ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +29,7 @@
     width: 400px;
     background: #fff;
     border-radius: 6px;
-    position: absolute;
+    
     top: 100px;
     left: 50%;
     transform: translate(-50%,-50%) scale(1); 
@@ -79,7 +80,7 @@
             gap: 20px;
         }
         .center-buttons button, .education button{
-            background-color: #224e75; /* Green */
+            background-color: #0060B9; /* Green */
             border: none;
             color: white;
             padding: 5px 3px;
@@ -90,12 +91,14 @@
             margin: 4px 2px;
             cursor: pointer;
             transition-duration: 0.4s;
+            width: 100%;
+            border-radius: 5px;
         }
 
         .center-buttons button:hover , .education button:hover{
             background-color: white; 
             color: #333; 
-            border: 2px solid #4CAF50;
+            border: 2px solid #0060B9;
         }
 
 
@@ -104,7 +107,7 @@
     width: 100%;
     margin-top: 50px;
     padding: 10px 0;
-    background: #224e75;
+    background: #0060B9;
     color: #fff;
     border: 0;
     outline: none;
