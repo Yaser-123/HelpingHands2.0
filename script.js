@@ -28,7 +28,7 @@ function onSignIn(googleUser) {
   
 
     document.getElementById('submit-button').addEventListener('click', function() {
-      alert('Thanks');
+      alert('Thank you for submitting the form, here is a list of candidates curated especially according to your requirements..');
       window.location.href = 'recruiter.html';
     });
 
