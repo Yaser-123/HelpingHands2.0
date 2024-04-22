@@ -8,32 +8,43 @@
 </head>
 <body>
     <link rel="stylesheet" href="green.css"/>
-    <div class="container">
+    <div class="container" id="container">
         
          <div class="popup" id="popup">
-            <h5>Register Here!</h6>
+            <h5>Register Here</h6>
             
             <div class="job">
                 <img src="ycwzoaqr.png" alt="Post Job">
                 <img src="searchh.png" alt="Search Job">
             </div>
             <div class="buttons center-buttons"> 
-                <button type="button" class="search-job" onclick="window.location.href='employer.html'">Post Job</button>
-                <button type="button" class="search-job" onclick="window.location.href='form.html'">Apply for Jobs</button>
+                <button type="button" onclick="opener.location.href='employer.html'; window.close();">Post Job</button>
+                <button type="button" onclick="opener.location.href='form.html'; window.close(); ">Apply for Jobs</button>
             </div>
+            
             
                 <!-- <button type="submit" >Post Job</button>
                 <button type="button" >Search Job</button>
             </div> -->
             <div class="education">
-                <button type="button" onclick="window.location.href='box.html' ">Access Educational Resources</button>
+                <button type="button" onclick="openBox()">Access Educational Resources</button>
             </div>
+            
+           
+            <!-- <div class="education">
+<button type="button" onclick="opener.location.href='box.html'; window.close(); ">Access Educational Resources</button>            </div>
 
             
             
-         </div>
+         </div> -->
     </div>
     <script>
+        function openBox() {
+                window.open('box.html', 'popup', 'width=600,height=400');
+            }
+        document.querySelector('.register-button').addEventListener('click', function() {
+            document.querySelector('.popup').style.display = 'block';
+        });
     
     </script>
 </body>

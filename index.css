@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size:20px;
+
+}
+
+.g-signin2 {
+  margin-right: 10px; /* Add space to the right of the element */
+}
 .feature-card-container {
   gap: var(--dl-space-space-unit);
   display: flex;
@@ -8,6 +19,14 @@
 .feature-card-text {
   font-weight: 600;
   line-height: 28px;
+}
+
+
+#home, #about, #contact-us {
+  margin-bottom: 50px; /* Add space below each section */
+}
+a {
+  font-size: 20px; /* Increase the font size */
 }
 @media(max-width: 767px) {
   .feature-card-feature-card {
@@ -949,4 +968,7 @@ header {
   display: none !important;
   opacity: 0.8; /* Decrease the opacity */
     margin-top: 20px; 
+}
+a {
+  font-size: 20px; /* Increase the font size */
 }
