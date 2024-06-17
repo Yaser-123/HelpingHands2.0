@@ -101,12 +101,11 @@
 
           var pannel = this.nextElementSibling;
 
-          if (pannel.style.display === "block") {
-            pannel.style.display = "none";
-          }
-          else{
-            pannel.style.display = "block";
-          }
+          if (pannel.style.maxHeight) {
+      pannel.style.maxHeight = null;
+    } else {
+      pannel.style.maxHeight = pannel.scrollHeight + "px";
+    }
         });
       }
     </script>
