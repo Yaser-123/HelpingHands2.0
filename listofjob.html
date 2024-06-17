@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="listofjob.css">
 </head>
 <body>
+    <div class="loader-container" id="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div class="content" id="content" style="display:none;">
         <div class="search-bar">
             <input type="text" placeholder="Enter job title, company name here...">
         </div>
@@ -196,9 +200,20 @@
 
 
         </main>
-      
+    </div>
        <script src="script.js"></script>
-
+       <script>
+        //Loader Script
+        document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            const loaderContainer = document.getElementById('loader-container');
+            const content = document.getElementById('content');
+    
+            loaderContainer.style.display = 'none';
+            content.style.display = 'block';
+            }, 1000);
+        });
+       </script>
     
         <!-- Rest of your content -->
 </body>

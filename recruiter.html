@@ -8,7 +8,10 @@
 </head>
 <body>
     
-
+    <div class="loader-container" id="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div class="content" id="content" style="display:none;">
     <h1>Candidates</h1>
     <div class="flex-container">
         <div id="mySidebar" class="sidebar">
@@ -70,7 +73,19 @@
            <p>2020/08/24 at 11:56 am</p>
        </div>
    </div>
+   </div>
    <script src="script.js"></script>
+   <script>
+    //Loader Script
+    document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const loaderContainer = document.getElementById('loader-container');
+        const content = document.getElementById('content');
 
+        loaderContainer.style.display = 'none';
+        content.style.display = 'block';
+        }, 1000);
+    });
+   </script>
 </body>
 </html>

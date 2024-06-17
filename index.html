@@ -80,6 +80,10 @@
 
   
       <link href="./index.css" rel="stylesheet" />
+      <div class="loader-container" id="loader-container">
+        <div class="loader"></div>
+      </div>
+      <div class="content" id="content" style="display:none;">
       <div class="home-container">
         <div class="home-header">
           <header
@@ -720,7 +724,7 @@
         <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
       </ul>
     </footer>
-
+  </div>
     <!-- <footer class="contact-us">
       <h2>Contact Us</h2>
       <ul>
@@ -773,6 +777,17 @@ popupWindow.opener = window;}
       x.parentNode.insertBefore(s, x);
     }
   }
+  //Loader Script
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const loaderContainer = document.getElementById('loader-container');
+        const content = document.getElementById('content');
+
+        loaderContainer.style.display = 'none';
+        content.style.display = 'block';
+    }, 1000);
+});
+
   </script>
 
 
