@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="education.css">
 </head>
 <body>
-    
+    <div class="loader-container" id="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div class="content" id="content" style="display:none;">
     <div class="othercourses">
         <h2>Courses you may like...</h2>
         <div class="courses">
@@ -101,7 +104,19 @@
         </section>
         
     </div>
-
+    </div>
+    <script>
+        //Loader Script
+        document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            const loaderContainer = document.getElementById('loader-container');
+            const content = document.getElementById('content');
+    
+            loaderContainer.style.display = 'none';
+            content.style.display = 'block';
+            }, 1000);
+        });
+       </script>
 
 
 </body>
