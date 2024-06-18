@@ -12,7 +12,7 @@ yarn install
 ```
 Create an `.env` file with the following content 
 ```
-PGSQL_URI="YOUR POSTGRESQL CONNECTION URL"
+PGSQL_URL="YOUR POSTGRESQL CONNECTION URL"
 ```
 Run the service using 
 ```
