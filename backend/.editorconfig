@@ -12,8 +12,5 @@ indent_size = 2
 
 [*.{js,ts}]
 quote_type = double
-continuation_indent_size = 4
-curly_bracket_next_line = false
-indent_brace_style = BSD
 spaces_around_operators = true
 spaces_around_brackets = none
