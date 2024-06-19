@@ -4,22 +4,28 @@ Backend service for HelpingHands.
 
 ## running the service
 
-Install the packages required using 
+Install the packages required using
+
 ```sh
 npm install
 # or
 yarn install
 ```
-Create an `.env` file with the following content 
+
+Create an `.env` file with the following content
+
 ```
 PGSQL_URL="YOUR POSTGRESQL CONNECTION URL"
 ```
-Run the service using 
+
+Run the service using
+
 ```
 npm run dev
 # or
-node index.js
+ts-node index.js
 ```
+
 ## endpoints
 
 `[GET] /`: Debug endpoint.
