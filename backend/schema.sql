@@ -1,48 +1,52 @@
-CREATE TABLE IF NOT EXISTS "users"(
-    "userId" VARCHAR(10) NOT NULL,
-    "userName" VARCHAR(40) NOT NULL,
+CREATE TABLE "users"(
+    "id" SERIAL NOT NULL,
+    "name" VARCHAR(40) NOT NULL,
     "email" VARCHAR(255) NOT NULL,
     "role" VARCHAR(255) NOT NULL,
-    "password" VARCHAR(100) NOT NULL,
+    "password" VARCHAR(10) NOT NULL,
     "createdAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
     "updatedAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL
 );
 ALTER TABLE
-    "users" ADD PRIMARY KEY("userId");
-CREATE TABLE IF NOT EXISTS "companies"(
-    "companyId" VARCHAR(10) NOT NULL,
-    "companyName" VARCHAR(40) NOT NULL,
+    "users" ADD PRIMARY KEY("id");
+CREATE TABLE "companies"(
+    "id" SERIAL NOT NULL,
+    "name" VARCHAR(40) NOT NULL,
     "address" VARCHAR(255) NOT NULL,
     "createdAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
     "updatedAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL
 );
 ALTER TABLE
-    "companies" ADD PRIMARY KEY("companyId");
-CREATE TABLE IF NOT EXISTS "job_applications"(
-    "userId" VARCHAR(10) NOT NULL,
-    "jobId" VARCHAR(10) NOT NULL,
+    "companies" ADD PRIMARY KEY("id");
+CREATE TABLE "job_applications"(
+    "userId" INTEGER NOT NULL,
+    "jobId" INTEGER NOT NULL,
     "createdAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
     "updatedAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL
 );
-ALTER TABLE
-    "job_applications" ADD PRIMARY KEY("userId");
-CREATE TABLE IF NOT EXISTS "jobs"(
-    "jobId" VARCHAR(10) NOT NULL,
+CREATE TABLE "jobs"(
+    "id" SERIAL NOT NULL,
     "title" VARCHAR(40) NOT NULL,
-    "jobDescription" VARCHAR(4000) NOT NULL,
-    "companyId" VARCHAR(10) NOT NULL,
+    "description" VARCHAR(255) NOT NULL,
+    "companyId" INTEGER NOT NULL,
     "createdAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
     "updatedAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL
 );
 ALTER TABLE
-    "jobs" ADD PRIMARY KEY("jobId");
-CREATE TABLE IF NOT EXISTS "courses"(
-    "courseId" VARCHAR(10) NOT NULL,
-    "courseName" VARCHAR(255) NOT NULL,
+    "jobs" ADD PRIMARY KEY("id");
+CREATE TABLE "courses"(
+    "id" SERIAL NOT NULL,
+    "name" VARCHAR(255) NOT NULL,
     "instituteName" VARCHAR(255) NOT NULL,
     "instituteLocation" VARCHAR(255) NOT NULL,
     "createdAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
     "updatedAt" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL
 );
 ALTER TABLE
-    "courses" ADD PRIMARY KEY("courseId");
+    "courses" ADD PRIMARY KEY("id");
+ALTER TABLE
+    "jobs" ADD CONSTRAINT "jobs_companyid_foreign" FOREIGN KEY("companyId") REFERENCES "companies"("id");
+ALTER TABLE
+    "job_applications" ADD CONSTRAINT "job_applications_jobid_foreign" FOREIGN KEY("jobId") REFERENCES "jobs"("id");
+ALTER TABLE
+    "job_applications" ADD CONSTRAINT "job_applications_userid_foreign" FOREIGN KEY("userId") REFERENCES "users"("id");

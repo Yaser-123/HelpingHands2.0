@@ -28,26 +28,12 @@ export class DatabaseSession {
 
 	async addUser(data: UserInputData): Promise<User> {
 		// TODO: implement sha256 hashing to save passwords.
-		let userId = generateAlphaNumericString(10);
 		let time = new Date();
-		await this.pool.query(
-			`INSERT INTO users VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-			[
-				userId,
-				data.userName,
-				data.email,
-				data.role,
-				data.password,
-				time,
-				time,
-			],
+		let res = await this.pool.query(
+			`INSERT INTO users VALUES (DEFAULT, $1, $2, $3, $4, $5, $6) RETURNING *;`,
+			[data.name, data.email, data.role, data.password, time, time],
 		);
-		return {
-			userId,
-			...data,
-			createdAt: time,
-			updatedAt: time,
-		};
+		return res.rows[0];
 	}
 
 	async getUser(
@@ -55,52 +41,39 @@ export class DatabaseSession {
 		orEmail: boolean = false,
 	): Promise<User | undefined> {
 		let query = orEmail
-			? `SELECT * FROM users WHERE userId=$1 OR email=$1`
-			: `SELECT * FROM users WHERE userId=$1`;
+			? `SELECT * FROM users WHERE id=$1 OR email=$1`
+			: `SELECT * FROM users WHERE id=$1`;
 		let res = await this.pool.query<User>(query, [id]);
 		return res.rows.at(0);
 	}
 
 	async addCompany(data: CompanyInputData): Promise<Company> {
-		let companyId = generateAlphaNumericString(10);
 		let now = new Date();
-		await this.pool.query(
-			`INSERT INTO companies VALUES ($1, $2, $3, $4, $5)`,
-			[companyId, data.companyName, data.address, now, now],
+		let res = await this.pool.query(
+			`INSERT INTO companies VALUES (DEFAULT, $1, $2, $3, $4) RETURNING *;`,
+			[data.name, data.address, now, now],
 		);
-		return {
-			companyId,
-			...data,
-			createdAt: now,
-			updatedAt: now,
-		};
+		return res.rows[0];
 	}
 
 	async getCompany(comapnyId: string): Promise<Company | undefined> {
-		let res = await this.pool.query(
-			`SELECT * FROM companies WHERE companyId=$1`,
-			[comapnyId],
-		);
+		let res = await this.pool.query(`SELECT * FROM companies WHERE id=1`, [
+			comapnyId,
+		]);
 		return res.rows.at(0);
 	}
 
 	async addJob(data: JobInputData): Promise<Job> {
-		let jobId = generateAlphaNumericString(10);
 		let now = new Date();
-		await this.pool.query(
-			`INSERT INTO jobs VALUES ($1, $2, $3, $4, $5, $6)`,
-			[jobId, data.title, data.jobDescription, data.companyId, now, now],
+		let res = await this.pool.query(
+			`INSERT INTO jobs VALUES (DEFAULT, $1, $2, $3, $4, $5) RETURNING *;`,
+			[data.title, data.description, data.companyId, now, now],
 		);
-		return {
-			jobId,
-			...data,
-			createdAt: now,
-			updatedAt: now,
-		};
+		return res.rows[0];
 	}
 
 	async getJob(jobId: string): Promise<Job | undefined> {
-		let res = await this.pool.query(`SELECT * FROM jobs WHERE jobId=$1`, [
+		let res = await this.pool.query(`SELECT * FROM jobs WHERE id=$1`, [
 			jobId,
 		]);
 		return res.rows.at(0);
@@ -108,16 +81,11 @@ export class DatabaseSession {
 
 	async addJobApp(data: JobApplicationInputData): Promise<JobApplication> {
 		let now = new Date();
-		await this.pool.query(
-			`INSERT INTO job_applications VALUES ($1, $2, $3, $4)`,
+		let res = await this.pool.query(
+			`INSERT INTO job_applications VALUES ($1, $2, $3, $4) RETURNING *`,
 			[data.userId, data.jobId, now, now],
 		);
-		return {
-			userId: data.userId,
-			jobId: data.jobId,
-			createdAt: now,
-			updatedAt: now,
-		};
+		return res.rows[0];
 	}
 
 	async getJobApps(jobId: string): Promise<{ applicants: JobApplication[] }> {
@@ -131,25 +99,12 @@ export class DatabaseSession {
 	}
 
 	async addCourse(data: CourseInputData): Promise<Course> {
-		let courseId = generateAlphaNumericString(10);
 		let now = new Date();
-		await this.pool.query(
-			`INSERT INTO courses VALUES ($1, $2, $3, $4, $5, $6)`,
-			[
-				courseId,
-				data.courseName,
-				data.instituteName,
-				data.instituteLocation,
-				now,
-				now,
-			],
+		let res = await this.pool.query(
+			`INSERT INTO courses VALUES (DEFAULT, $1, $2, $3, $4, $5) RETURNING *`,
+			[data.name, data.instituteName, data.instituteLocation, now, now],
 		);
-		return {
-			courseId,
-			...data,
-			updatedAt: now,
-			createdAt: now,
-		};
+		return res.rows[0];
 	}
 
 	async getCourse(courseId: string) {

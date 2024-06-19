@@ -1,41 +1,41 @@
 export interface UserInputData {
-	userName: string;
+	name: string;
 	email: string;
 	role: string;
 	password: string;
 }
 
 export interface User extends UserInputData {
-	userId: string;
+	id: number;
 	createdAt: Date;
 	updatedAt: Date;
 }
 
 export interface CompanyInputData {
-	companyName: string;
+	name: string;
 	address: string;
 }
 
 export interface Company extends CompanyInputData {
-	companyId: string;
+	id: number;
 	createdAt: Date;
 	updatedAt: Date;
 }
 export interface JobInputData {
 	title: string;
-	jobDescription: string;
-	companyId: string;
+	description: string;
+	companyId: number;
 }
 
 export interface Job extends JobInputData {
-	jobId: string;
+	id: number;
 	createdAt: Date;
 	updatedAt: Date;
 }
 
 export interface JobApplicationInputData {
-	userId: string;
-	jobId: string;
+	userId: number;
+	jobId: number;
 }
 
 export interface JobApplication extends JobApplicationInputData {
@@ -43,13 +43,13 @@ export interface JobApplication extends JobApplicationInputData {
 	updatedAt: Date;
 }
 export interface CourseInputData {
-	courseName: string;
+	name: string;
 	instituteName: string;
 	instituteLocation: string;
 }
 
 export interface Course extends CourseInputData {
-	courseId: string;
+	id: number;
 	createdAt: Date;
 	updatedAt: Date;
 }
