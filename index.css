@@ -28,19 +28,6 @@
 a {
   font-size: 20px; /* Increase the font size */
 }
-@media (max-width: 767px) {
-  .feature-card-feature-card {
-    flex-direction: row;
-  }
-  .feature-card-container {
-    flex-direction: column;
-  }
-}
-@media (max-width: 479px) {
-  .feature-card-container {
-    flex-direction: column;
-  }
-}
 
 .question1-container {
   gap: var(--dl-space-space-unit);
@@ -59,8 +46,8 @@ a {
 .home-container {
   width: 100%;
   display: flex;
-  overflow: auto;
-  min-height: 100vh;
+  overflow-x: hidden;
+  min-height: 80vh;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -129,6 +116,33 @@ a {
   flex-direction: column;
 }
 /* mehak */
+
+.home-hero-sub-heading {
+  display: flex;
+  align-items: center;
+}
+
+.home-img {
+  width: 100%; /* Default to full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card {
+  transition: transform 0.6s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card-body {
+  text-align: center;
+}
+.icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
 .heroContainer-home-hero1 {
   display: flex;
   align-items: center;
@@ -136,11 +150,22 @@ a {
 
 .home-heading-1 {
   font-size: 3rem;
+  letter-spacing: 1px;
   color: #0056b3;
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+.home-faq {
+  /* flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  margin: 0 3rem;
+}
 /* mehak end */
 
 .home-top {
@@ -231,7 +256,6 @@ a {
   gap: var(--dl-space-space-oneandhalfunits);
   display: flex;
   align-items: center;
-  flex-direction: row;
 }
 .home-features {
   flex: 0 0 auto;
@@ -257,7 +281,7 @@ a {
 .home-container02 {
   display: flex;
   align-items: center;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: flex-start;
 }
 .home-features-heading {
@@ -588,14 +612,7 @@ a {
   text-align: center;
   margin-bottom: var(--dl-space-space-twounits);
 }
-.home-faq {
-  flex: 0 0 auto;
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .home-faq1 {
   gap: var(--dl-space-space-twounits);
   width: 100%;
@@ -702,7 +719,22 @@ a {
   width: 24px;
   height: 24px;
 }
-@media (max-width: 991px) {
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .home-left-content {
+    width: fit-content;
+  }
+}
+
+@media (min-width: 880px) and (max-width: 991px) {
+  .home-hero-sub-heading {
+    width: 70vw;
+  }
+
+  .home-hero-sub-heading {
+    flex-direction: column;
+  }
+
   .home-hero1 {
     flex-direction: column;
   }
@@ -756,6 +788,28 @@ a {
     padding-right: var(--dl-space-space-threeunits);
   }
 }
+
+@media (min-width: 680px) and (max-width: 880px) {
+  .home-hero-sub-heading {
+    width: 80vw;
+  }
+  .home-hero-sub-heading {
+    flex-direction: column;
+  }
+
+  .feature-card-feature-card {
+    flex-direction: row;
+  }
+  .feature-card-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 479px) {
+  .feature-card-container {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 767px) {
   .home-interactive {
     padding-left: var(--dl-space-space-twounits);
@@ -763,6 +817,10 @@ a {
   }
   .home-desktop-menu {
     display: none;
+  }
+
+  .home-hero-sub-heading {
+    flex-direction: column;
   }
   .home-burger-menu {
     display: flex;
@@ -869,7 +927,29 @@ a {
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
 }
-@media (max-width: 479px) {
+
+@media (min-width: 480px) and (max-width: 680px) {
+  .home-img {
+    display: none;
+  }
+
+  .home-hero-sub-heading {
+    flex-direction: column;
+    width: 80vw;
+  }
+}
+@media (min-width: 280px) and (max-width: 479px) {
+  .home-hero-sub-heading {
+    width: 80vw;
+  }
+
+  .home-img {
+    display: none;
+  }
+  .home-hero-sub-heading {
+    flex-direction: column;
+  }
+
   .home-navbar-interactive {
     padding: var(--dl-space-space-unit);
   }
@@ -973,18 +1053,17 @@ header {
   border-radius: 20%;
 }
 #google_translate_element {
-  margin-left: 20px; /* Add space to the left of the element */
+  margin-left: 20px;
 }
 #google_translate_element .goog-logo-link {
   display: none !important;
-  opacity: 0.8; /* Decrease the opacity */
+  opacity: 0.8;
   margin-top: 20px;
 }
 a {
-  font-size: 20px; /* Increase the font size */
+  font-size: 20px;
 }
 
-/* Loader Styling */
 .loader-container {
   display: flex;
   width: 100vw;
