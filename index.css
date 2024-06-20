@@ -131,6 +131,7 @@ a {
 /* mehak */
 .heroContainer-home-hero1 {
   display: flex;
+  align-items: center;
 }
 
 .home-heading-1 {
