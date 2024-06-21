@@ -47,7 +47,7 @@ a {
   width: 100%;
   display: flex;
   overflow-x: hidden;
-  min-height: 80vh;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -115,7 +115,6 @@ a {
   align-items: flex-start;
   flex-direction: column;
 }
-/* mehak */
 
 .home-hero-sub-heading {
   display: flex;
@@ -130,6 +129,7 @@ a {
 .card {
   transition: transform 0.6s, box-shadow 0.3s;
   cursor: pointer;
+  margin-top: 1rem;
 }
 .card:hover {
   transform: translateY(-3px);
@@ -137,6 +137,7 @@ a {
 }
 .card-body {
   text-align: center;
+  background: rgb(218, 233, 255);
 }
 .icon {
   font-size: 2em;
@@ -166,7 +167,18 @@ a {
 
   margin: 0 3rem;
 }
-/* mehak end */
+
+.home-text85,
+.heading2 {
+  color: #007bff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.accordion-header button {
+  font-weight: 500;
+}
 
 .home-top {
   width: 100%;
@@ -255,6 +267,7 @@ a {
 .home-btn-group {
   gap: var(--dl-space-space-oneandhalfunits);
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .home-features {
@@ -271,11 +284,12 @@ a {
   display: flex;
   max-width: var(--dl-size-size-maxwidth);
   align-items: center;
-  padding-top: var(--dl-space-space-fourunits);
+
+  padding-top: var(--dl-space-space-twounits);
   padding-left: var(--dl-space-space-threeunits);
   padding-right: var(--dl-space-space-threeunits);
   flex-direction: column;
-  padding-bottom: var(--dl-space-space-fourunits);
+  padding-bottom: var(--dl-space-space-twounits);
   justify-content: flex-start;
 }
 .home-container02 {
