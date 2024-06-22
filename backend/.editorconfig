@@ -1,0 +1,16 @@
+# docs:  http://EditorConfig.org
+
+root = true
+
+[*]
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+end_of_line = lf
+indent_style = space
+indent_size = 2
+
+[*.{js,ts}]
+quote_type = double
+spaces_around_operators = true
+spaces_around_brackets = none
