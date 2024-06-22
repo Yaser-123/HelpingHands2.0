@@ -4,15 +4,19 @@ body{
     margin: 0;
 }
 .othercourses h2{
-
     text-align: left;
     margin-left: 10px;
     font-size: 40px;
 }
-.othercourses button{
-    display:inline;
+.othercourses{
+    width:98%;
+}
+.courses{
+    display:flex;
     align-items: center;
     justify-content: space-evenly;
+}
+.courses button{
     width:200px;
     height:50px;
     background-color:#4192dd;
@@ -22,7 +26,7 @@ body{
     font-size: 25px;
     margin-left: 10px;
     cursor: pointer;
-    
+    transition: 0.5s;
 }
 
 .section{
@@ -32,7 +36,6 @@ body{
 .section h3{
     margin-right: 3px;
     margin-top: 30px;
-    margin-left: 449px;
     font-size: 30px;
 }
 .section p{
@@ -41,21 +44,19 @@ body{
     margin-right: 10px;
     font-size: 20px;
 }
-
-
-
-
-
 .container {
-    max-width: 1000px;
     margin: 0 auto;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .job-listings {
+    width: 60%;
     margin-top: 1px;
-    float: right;
-    width: 80%;
+    transition: 0.5s;
 }
 
 .job-listings ul {
@@ -114,6 +115,41 @@ body{
     background-color: grey;
     color: white;
     cursor: pointer;
+}
+@media only screen and (max-width:1320px){
+    .courses button{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:1200px){
+    
+    .courses button{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:720px){
+    .job-listings {
+        width: 80%;
+        margin-top: 1px;
+        transition: 0.5s;
+    }
+    .othercourses h2{
+        text-align: center;
+        font-size: 30px;
+    }
+    .courses button{
+        margin: 0.5rem;
+    }
+    .courses{
+    flex-direction: column;
+    }
+}
+@media only screen and (max-width:520px){
+    .job-listings {
+        width: 95%;
+        margin-top: 1px;
+        transition: 0.5s;
+    }
 }
 /* Loader Styling */
 .loader-container{
