@@ -4,48 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PopUp Design</title>
+    <title>Register</title>
+    <link rel="stylesheet" href="green.css"/>
 </head>
 <body>
-    <link rel="stylesheet" href="green.css"/>
-    <div class="container" id="container">
-        
-         <div class="popup" id="popup">
-            <h5>Register Here</h6>
-            
-            <div class="job">
-                <img src="ycwzoaqr.png" alt="Post Job">
-                <img src="searchh.png" alt="Search Job">
+    <div class="container">
+        <div class="left-section">
+            <button class="back-button" onclick="window.location.href='index.html'"><img src="assets/registerpage/image.png" width="50px" heigth="50px"/></button>
+            <h1 class="animated-heading">Helping Hands<span class="blinking-cursor">|</span></h1>
+            <p class="description">
+                Helping Hands is dedicated to providing support and resources to those in need. Our mission is to empower individuals and communities by offering job opportunities, educational resources, and a supportive network.
+            </p>
+            <!-- <h5>Register Here</h5> -->
+            <div class="buttons">
+                <button type="button" onclick="window.location.href='employer.html'">Post a Job</button>
+                <button type="button" onclick="window.location.href='form.html'">Apply for Jobs</button>
+                <button type="button" onclick="window.location.href='box.html'">Access Educational Resources</button>
             </div>
-            <div class="buttons center-buttons"> 
-                <button type="button" onclick="opener.location.href='employer.html'; window.close();">Post Job</button>
-                <button type="button" onclick="opener.location.href='form.html'; window.close(); ">Apply for Jobs</button>
-            </div>
-            
-            
-                <!-- <button type="submit" >Post Job</button>
-                <button type="button" >Search Job</button>
-            </div> -->
-            <div class="education">
-                <button type="button" onclick="openBox()">Access Educational Resources</button>
-            </div>
-            
-           
-            <!-- <div class="education">
-<button type="button" onclick="opener.location.href='box.html'; window.close(); ">Access Educational Resources</button>            </div>
-
-            
-            
-         </div> -->
+            <p class="quote">
+                "The best way to find yourself is to lose yourself in the service of others."<br>- Mahatma Gandhi
+            </p>
+        </div>
+        <div class="right-section">
+            <img src="./assets/registerpage/img1.jpg" alt="Post Job" class="transition-image">
+            <img src="./assets/registerpage/img2.png" alt="Search Job" class="transition-image">
+            <img src="./assets/registerpage/img3.jpg" alt="Search Job" class="transition-image">
+            <img src="./assets/registerpage/img4.jpg" alt="Post Job" class="transition-image">
+            <img src="./assets/registerpage/img5.jpg" alt="Search Job" class="transition-image">
+            <img src="./assets/registerpage/img6.jpg" alt="Search Job" class="transition-image">
+            <img src="./assets/registerpage/img7.jpg" alt="Search Job" class="transition-image">
+            <img src="./assets/registerpage/img8.jpg" alt="Post Job" class="transition-image">
+            <img src="./assets/registerpage/img9.jpg" alt="Search Job" class="transition-image">
+            <img src="./assets/registerpage/img10.jpg" alt="Search Job" class="transition-image">
+        </div>
     </div>
+
     <script>
-        function openBox() {
-                window.open('box.html', 'popup', 'width=600,height=400');
-            }
-        document.querySelector('.register-button').addEventListener('click', function() {
-            document.querySelector('.popup').style.display = 'block';
-        });
-    
+        // JavaScript for image transitions
+        const images = document.querySelectorAll('.transition-image');
+        let currentImageIndex = 0;
+
+        function showNextImage() {
+            images[currentImageIndex].style.opacity = 0;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].style.opacity = 1;
+        }
+
+        setInterval(showNextImage, 3000);
     </script>
 </body>
 </html>

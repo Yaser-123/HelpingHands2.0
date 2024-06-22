@@ -1,140 +1,158 @@
-*{
-    margin-top: 300x;
-    
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-}
-.container{
-    width: 80%;
-    height: 80%;
-    
-    background:#E5F0FF ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
 
-.btn{
-    padding: 10px 60px;
-    background: #fff;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 30px;
-} 
-/* .popup{
-    margin-top: 80px;
-    width: 400px;
-    background: #fff;
-    border-radius: 6px;
-    margin: 0 auto; 
-    
-
-    
-    top: 100px;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(1); 
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    visibility: visible;
-    transition: transform 0.4s, top 0.4s;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-} */
-#popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: #fff;
-    border-radius: 6px;
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    visibility: visible;
-    transition: transform 0.4s, top 0.4s;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup h5{
-    margin-top: 60px;
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-    
-}
-
-.popup .job{
-    display: flex;
-    
-}
-.popup .job img{
-    margin-top: 11px;
-    width: 130px;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    margin-right: 10px;
-    
-}
-.search-job {
-    margin-left: 3px;
-}
-
-.center-buttons, .education button {
+body {
     display: flex;
     justify-content: center;
-    gap: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .center-buttons button, .education button{
-            background-color: #0060B9; /* Green */
-            border: none;
-            color: white;
-            padding: 5px 3px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: 4px 2px;
-            cursor: pointer;
-            transition-duration: 0.4s;
-            width: 100%;
-            border-radius: 5px;
-        }
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #e5f0ff);
+}
 
-        .center-buttons button:hover , .education button:hover{
-            background-color: white; 
-            color: #333; 
-            border: 2px solid #0060B9;
-        }
-
-
-.popup .buttons{
-    display: flex;
+.container {
     width: 100%;
-    margin-top: 50px;
-    padding: 10px 0;
-    background: #0060B9;
-    color: #fff;
-    border: 0;
-    outline: none;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    justify-items: center;
-    align-items: center;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
+.left-section, .right-section {
+    padding: 20px;
+}
 
+.left-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    text-align: center;
+}
 
+.animated-heading {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000000;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.left-section h5 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #0060B9;
+}
+
+.left-section .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.left-section .buttons button {
+    background-color: #0060B9;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 90px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section .buttons button:hover {
+    background-color: white;
+    color: #0060B9;
+    border: 2px solid #0060B9;
+    transform: scale(1.05);
+}
+
+.quote {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.right-section {
+    flex: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.transition-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.transition-image:first-child {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 50px;
+    color: #000000;
+    animation: blink 1s step-end infinite;
+}
+  
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    border: none;
+    color: white;
+    padding: 0px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 1%;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    transform: scale(1.25);
+    color: #000000;
+}
