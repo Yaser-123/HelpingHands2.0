@@ -20,7 +20,7 @@ dotenv.config();
 export const app = express();
 const pool = new Pool({
   connectionString: process.env.PGSQL_URL,
-  ssl: true,
+  ssl: false,
 });
 export const dbSession = new DatabaseSession(pool);
 
