@@ -5,12 +5,12 @@
   font-size: 20px;
 }
 
-.g-signin2 {
-  margin-right: 10px; /* Add space to the right of the element */
-}
+/* .g-signin2 {
+  margin-right: 10px; /* Add space to the right of the element 
+} */
 
 svg {
-  height: 1rem;
+  height: 1.5rem;
 }
 .feature-card-container {
   gap: var(--dl-space-space-unit);
@@ -120,16 +120,6 @@ a {
   flex-direction: column;
 }
 
-.home-hero-sub-heading {
-  display: flex;
-  align-items: center;
-}
-
-.home-img {
-  width: 100%; /* Default to full width */
-  height: auto; /* Maintain aspect ratio */
-}
-
 .card {
   transition: transform 0.6s, box-shadow 0.3s;
   cursor: pointer;
@@ -148,19 +138,6 @@ a {
   margin-bottom: 10px;
 }
 
-.heroContainer-home-hero1 {
-  display: flex;
-  align-items: center;
-}
-
-.home-heading-1 {
-  font-size: 3rem;
-  letter-spacing: 1px;
-  color: #0056b3;
-  font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
 .home-faq {
   /* flex: 0 0 auto;
     width: 100%;
@@ -172,29 +149,10 @@ a {
   margin: 0 3rem;
 }
 
-.home-text85,
-.heading2 {
-  color: #007bff;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  letter-spacing: 1px;
-  font-weight: bold;
-}
-
 .accordion-header button {
   font-weight: 500;
 }
 
-.accordion-body p {
-  color: black;
-}
-
-.home-top {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--dl-space-space-threeunits);
-  justify-content: space-between;
-}
 .home-close-menu {
   display: flex;
   align-items: center;
@@ -248,36 +206,7 @@ a {
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-.home-hero {
-  flex: 0 0 auto;
-  width: 100%;
-  height: auto;
-  display: flex;
-  margin-top: 96px;
-  align-items: flex-start;
-  justify-content: center;
-}
-.home-container01 {
-  gap: var(--dl-space-space-oneandhalfunits);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.home-hero-heading {
-  max-width: 800px;
-  text-align: center;
-}
-.home-hero-sub-heading {
-  font-size: 18px;
-  text-align: center;
-}
-.home-btn-group {
-  gap: var(--dl-space-space-oneandhalfunits);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .home-features {
   flex: 0 0 auto;
   width: 100%;
