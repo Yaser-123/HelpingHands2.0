@@ -341,3 +341,61 @@
   text-transform: none;
   text-decoration: none;
 }
+
+/* review */
+.heading {
+  font-size: 40px;
+  text-align: center;
+}
+.review .review-slider {
+  box-shadow: var(--box-shadow);
+}
+
+.review .review-slider .slide {
+  background: var(--white);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.review .review-slider .slide img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.review .review-slider .slide h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.review .review-slider .slide p {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  line-height: 1.7;
+  padding: 1rem 0;
+}
+
+.review .review-slider .slide .stars {
+  padding: 1rem 0;
+  padding-bottom: 1.5rem;
+}
+
+.review .review-slider .slide .stars i {
+  font-size: 2rem;
+  color: gold;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--main-color);
+}
+
+/* end */
