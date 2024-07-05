@@ -7,7 +7,9 @@
 // }
 
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
 
 export default function MyApp() {
   // State variables for each input field
@@ -44,7 +46,16 @@ export default function MyApp() {
 
   return (
     <div>
-      <Home />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      </Router>
+
       <h1>Welcome to my app</h1>
       <form onSubmit={handleSubmit}>
         <div>
