@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiSun, FiMoon } from "react-icons/fi";
-import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +18,9 @@ const Navbar = () => {
   return (
     <nav className={`p-3 ${isDarkMode ? "bg-gray-800" : "bg-blue-900"}`}>
       <div className="container mx-auto flex items-center justify-between flex-wrap">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <Link to="/" className="flex items-center">
-            <span className="brand font-semibold text-white text-xl">
+        <div className="flex items-center flex-shrink-0  text-white mr-6">
+          <Link to="/" className="flex items-center no-underline">
+            <span className=" font-semibold text-white text-xl ">
               Helping Hands
             </span>
           </Link>
@@ -29,7 +28,7 @@ const Navbar = () => {
         <div className="block lg:hidden">
           <button
             onClick={toggleMenu}
-            className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray-400 hover:border-gray-400"
+            className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray-400 hover:border-gray-400 mt-2"
           >
             <svg
               className="fill-current h-3 w-3"
@@ -42,36 +41,35 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className={`w-full lg:flex lg:items-center lg:w-auto ${
-            isOpen ? "block" : "hidden"
-          }`}
+          className={`w-full lg:flex lg:items-center lg:w-auto transition-all duration-500  ${
+            isOpen ? "max-h-screen" : "max-h-0"
+          } overflow-hidden lg:max-h-full`}
         >
           <div className="links text-sm lg:flex-grow">
             <Link
               to="/"
-              className="block mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+              className="block no-underline mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="block mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+              className="block  no-underline  mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="block mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+              className="block  no-underline  mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
             >
               Contact
             </Link>
           </div>
-          <div className="flex items-center mt-2 lg:mt-0">
-            <div className="flex-grow lg:flex-grow"></div>
-            <button className="bg-blue-500 px-2 py-1 rounded-lg hover:bg-blue-600 mr-2">
+          <div className="flex lg:flex items-center mt-2 lg:mt-0">
+            <button className="bg-blue-500  px-2 py-1 rounded-lg hover:bg-blue-600 mr-2">
               <Link
                 to="/login"
-                className="block lg:inline-block text-white hover:text-gray-400"
+                className="block lg:inline-block  no-underline  text-white hover:text-gray-400"
               >
                 Log In
               </Link>
@@ -79,16 +77,20 @@ const Navbar = () => {
             <button className="bg-blue-500 px-2 py-1 rounded-lg hover:bg-blue-600 mr-2">
               <Link
                 to="/sign-up"
-                className="block lg:inline-block text-white hover:text-gray-400"
+                className="block lg:inline-block  no-underline  text-white hover:text-gray-400"
               >
                 Sign Up
               </Link>
             </button>
             <button
               onClick={toggleDarkMode}
-              className="flex items-center justify-center bg-gray-200 dark:bg-gray-600 px-2 py-1 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-200"
+              className="bg-gray-300 px-2 py-1 rounded-lg dark:bg-gray-700 "
             >
-              {isDarkMode ? <FiMoon /> : <FiSun />}
+              {isDarkMode ? (
+                <FiSun className="text-black" />
+              ) : (
+                <FiMoon className="text-white" />
+              )}
             </button>
           </div>
         </div>

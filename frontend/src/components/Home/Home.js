@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-
+import React from "react";
 import Accordion from "../Accordion/Accordion";
-
 import "./Home.css";
 import homeimg from "../../images/home-img.png";
 
 const Home = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
   const accordionItems = [
     {
       title: "How can I search for jobs on this website?",
@@ -44,7 +40,7 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="md:col-span-1 md:order-1">
                 <div className="max-w-lg mx-auto">
-                  <h1 className="text-5xl font-bold text-blue-800 mb-4 sm:text-2xl md:text-4xl dark:text-white">
+                  <h1 className="font-bold text-blue-800 mb-4 sm:text-2xl md:text-3xl lg:text-5xl dark:text-white">
                     Connecting you with local job opportunities
                   </h1>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-3">

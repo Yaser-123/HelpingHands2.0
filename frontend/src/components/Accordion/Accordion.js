@@ -10,7 +10,7 @@ const AccordionItem = ({ title, content }) => {
         className="flex justify-between items-center w-full p-3 text-left focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className=" font-medium sm:text-sm md:text-base lg:text-lg text-gray-900  dark:text-white">
+        <span className=" font-medium sm:text-sm md:text-base lg:text-md text-gray-900  dark:text-white">
           {title}
         </span>
         <svg
