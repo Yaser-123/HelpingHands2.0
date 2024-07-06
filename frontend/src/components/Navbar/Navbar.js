@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiSun, FiMoon } from "react-icons/fi";
+import logo from "../../images/favicon.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,11 +17,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`p-3 ${isDarkMode ? "bg-gray-800" : "bg-blue-900"}`}>
+    <nav className={`p-2 ${isDarkMode ? "bg-[#1E293B]" : "bg-blue-900"}`}>
       <div className="container mx-auto flex items-center justify-between flex-wrap">
         <div className="flex items-center flex-shrink-0  text-white mr-6">
           <Link to="/" className="flex items-center no-underline">
-            <span className=" font-semibold text-white text-xl ">
+            <img src={logo} className="h-10" alt="logo" />
+            <span className="font-semibold text-white text-base sm:text-xl md:text-2xl">
               Helping Hands
             </span>
           </Link>
@@ -45,31 +47,31 @@ const Navbar = () => {
             isOpen ? "max-h-screen" : "max-h-0"
           } overflow-hidden lg:max-h-full`}
         >
-          <div className="links text-sm lg:flex-grow">
+          <div className="links lg:flex-grow ">
             <Link
               to="/"
-              className="block no-underline mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+              className="block text-sm md:text-base  no-underline mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="block  no-underline  mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+              className="block  text-sm md:text-base no-underline  mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="block  no-underline  mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+              className="block  text-sm md:text-base no-underline  mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
             >
               Contact
             </Link>
           </div>
-          <div className="flex lg:flex items-center mt-2 lg:mt-0">
+          <div className="flex lg:flex items-center mt-1 lg:mt-0">
             <button className="bg-blue-500  px-2 py-1 rounded-lg hover:bg-blue-600 mr-2">
               <Link
                 to="/login"
-                className="block lg:inline-block  no-underline  text-white hover:text-gray-400"
+                className="block text-sm lg:inline-block  no-underline  text-white hover:text-gray-400"
               >
                 Log In
               </Link>
@@ -77,19 +79,19 @@ const Navbar = () => {
             <button className="bg-blue-500 px-2 py-1 rounded-lg hover:bg-blue-600 mr-2">
               <Link
                 to="/sign-up"
-                className="block lg:inline-block  no-underline  text-white hover:text-gray-400"
+                className="block text-sm lg:inline-block  no-underline  text-white hover:text-gray-400"
               >
                 Sign Up
               </Link>
             </button>
             <button
               onClick={toggleDarkMode}
-              className="bg-gray-300 px-2 py-1 rounded-lg dark:bg-gray-700 "
+              className=" px-2 py-1 rounded-lg bg-gray-200 dark:bg-gray-500"
             >
               {isDarkMode ? (
-                <FiSun className="text-black" />
+                <FiSun className="text-white" />
               ) : (
-                <FiMoon className="text-white" />
+                <FiMoon className="text-black" />
               )}
             </button>
           </div>
