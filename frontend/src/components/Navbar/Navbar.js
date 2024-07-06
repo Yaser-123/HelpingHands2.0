@@ -1,21 +1,28 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FiSun, FiMoon } from "react-icons/fi";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle("dark");
+  };
+
   return (
-    <nav className="bg-blue-900 p-3">
+    <nav className={`p-3 ${isDarkMode ? "bg-gray-800" : "bg-blue-900"}`}>
       <div className="container mx-auto flex items-center justify-between flex-wrap">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Link to="/" className="flex items-center">
-            {/* <img src={logo} alt="logo" className="h-8 w-8 mr-2" /> */}
-            <span className="font-semibold text-xl tracking-tight">
-              News Verse
+            <span className="brand font-semibold text-white text-xl">
+              Helping Hands
             </span>
           </Link>
         </div>
@@ -35,42 +42,54 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${
+          className={`w-full lg:flex lg:items-center lg:w-auto ${
             isOpen ? "block" : "hidden"
           }`}
         >
-          <div className="text-sm lg:flex-grow">
+          <div className="links text-sm lg:flex-grow">
             <Link
               to="/"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+              className="block mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+              className="block mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+              className="block mt-1 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
             >
               Contact
             </Link>
-
-            <Link
-              to="/login"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+          </div>
+          <div className="flex items-center mt-2 lg:mt-0">
+            <div className="flex-grow lg:flex-grow"></div>
+            <button className="bg-blue-500 px-2 py-1 rounded-lg hover:bg-blue-600 mr-2">
+              <Link
+                to="/login"
+                className="block lg:inline-block text-white hover:text-gray-400"
+              >
+                Log In
+              </Link>
+            </button>
+            <button className="bg-blue-500 px-2 py-1 rounded-lg hover:bg-blue-600 mr-2">
+              <Link
+                to="/sign-up"
+                className="block lg:inline-block text-white hover:text-gray-400"
+              >
+                Sign Up
+              </Link>
+            </button>
+            <button
+              onClick={toggleDarkMode}
+              className="flex items-center justify-center bg-gray-200 dark:bg-gray-600 px-2 py-1 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-200"
             >
-              Log In
-            </Link>
-            <Link
-              to="/sign-up"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
-            >
-              Sign Up
-            </Link>
+              {isDarkMode ? <FiMoon /> : <FiSun />}
+            </button>
           </div>
         </div>
       </div>

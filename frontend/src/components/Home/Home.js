@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-// import Accordion from "react-bootstrap/Accordion";
-// import { Accordion, Card } from "react-bootstrap";
+import React, { useState } from "react";
+
 import Accordion from "../Accordion/Accordion";
 
 import "./Home.css";
@@ -38,27 +36,8 @@ const Home = () => {
     },
   ];
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <>
-      <button
-        onClick={toggleDarkMode}
-        className="px-4 py-2 bg-blue-600 text-white rounded dark:bg-blue-400 dark:text-black"
-      >
-        Dark Mode
-      </button>
-
       <section className="p-5  dark:bg-[#101b2f] ">
         <div className="min-h-screen flex items-center justify-center">
           <div className="container mx-auto">
