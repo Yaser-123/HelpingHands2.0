@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-// import Accordion from "react-bootstrap/Accordion";
-// import { Accordion, Card } from "react-bootstrap";
+import React from "react";
 import Accordion from "../Accordion/Accordion";
-
 import "./Home.css";
 import homeimg from "../../images/home-img.png";
 
 const Home = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
   const accordionItems = [
     {
       title: "How can I search for jobs on this website?",
@@ -38,34 +32,15 @@ const Home = () => {
     },
   ];
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <>
-      <button
-        onClick={toggleDarkMode}
-        className="px-4 py-2 bg-blue-600 text-white rounded dark:bg-blue-400 dark:text-black"
-      >
-        Dark Mode
-      </button>
-
       <section className="p-5  dark:bg-[#101b2f] ">
         <div className="min-h-screen flex items-center justify-center">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="md:col-span-1 md:order-1">
                 <div className="max-w-lg mx-auto">
-                  <h1 className="text-5xl font-bold text-blue-800 mb-4 sm:text-2xl md:text-4xl dark:text-white">
+                  <h1 className="font-bold text-blue-800 mb-4 sm:text-2xl md:text-3xl lg:text-5xl dark:text-white">
                     Connecting you with local job opportunities
                   </h1>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
