@@ -1,246 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Helping hands</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
-      <link rel="stylesheet" href="style.css">
+
+<head>
+  <title>Helping hands</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper@11.1.4/swiper-bundle.min.css" />
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body 
-      {  margin: 0;}* 
-      {  box-sizing: border-box;  border-width: 0;  border-style: solid;}
-      p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption 
-      {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea 
-      
-      {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}
-      button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] 
-      {  -webkit-appearance: button;}
-      button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
+
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: Inter;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.15;
+      color: var(--dl-color-gray-black);
+      background-color: var(--dl-color-gray-white);
+    }
+  </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Helvetica Neue" data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+  <style>
+    @keyframes fade-in-left {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
       }
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
       }
-    </style>
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Add jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Helvetica Neue"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
- 
- 
- <style>
-      @keyframes fade-in-left {
-        0% {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-    </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
 
-    <!-- Add jQuery and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<body>
+  <!-- <a href="form.html">Register </a> -->
 
-  </head>
-  <body>
-    <!-- <a href="form.html">Register </a> -->
+  <link rel="stylesheet" href="./style.css" />
+  <div>
 
-    <link rel="stylesheet" href="./style.css" />
-    <div>
 
-  
-      <link href="./index.css" rel="stylesheet" />
-      <div class="loader-container" id="loader-container">
-        <div class="loader"></div>
-      </div>
-      <div class="content" id="content" style="display:none;">
+    <link href="./index.css" rel="stylesheet" />
+    <div class="loader-container" id="loader-container">
+      <div class="loader"></div>
+    </div>
+    <div class="content" id="content" style="display:none;">
       <div class="home-container">
         <div class="home-header">
-          <header
-            data-thq="thq-navbar"
-            class="navbarContainer home-navbar-interactive"
-          >
-            <span img="" class="logo">Helping hands</span>
-            <div data-thq="thq-navbar-nav" class="home-desktop-menu">
-              <nav class="home-links">
-                <a href="index.html">Home</a>
-                <a href="#about" class="home-nav22 ">About</a>
-                <a href="#contact-us-footer" class="home-nav32 ">Contact Us</a>
-                <blockquoteLanguage class="home-nav321 bodySmall"></blockquote>
-                  <div id="google_translate_element"></div>
+          <header class="navbar">
+            <div class="navbar-container">
+              <a href="index.html" class="navbar-logo">Helping Hands</a>
+              <nav class="navbar-menu" id="navbarMenu">
+                <ul class="navbar-list">
+                  <li><a href="#home" class="navbar-link">Home</a></li>
+                  <li><a href="#about" class="navbar-link">About</a></li>
+                  <li><a href="#services" class="navbar-link">Services</a></li>
+                  <li><a href="#contact" class="navbar-link">Contact</a></li>
+                </ul>
               </nav>
-              <div class="home-buttons">
-                 <script src="https://apis.google.com/js/platform.js" async defer></script>
-                <!-- <meta name="google-signin-client_id" content="755437075342-9b6pic9q5ae3tstqc47ddmeprjqmev0s.apps.googleusercontent.com"> -->
-                <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>  -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <iframe id="iframe" src="" style="height:100%;width:100%"></iframe>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="window.location.href='green.html'">
-  Register
-</button>
-
-
-
+              <div class="navbar-actions" id="navbarActions">
+                <div id="google_translate_element"></div>
+                <button class="navbar-button">Register</button>
               </div>
-            </div>
-
-            <div
-              data-thq="thq-mobile-menu"
-              class="home-mobile-menu1 mobileMenu">
-              <div class="home-nav">
-                <div class="home-top">
-                  <span class="logo">Helping hands</span>
-                  <div data-thq="thq-close-menu" class="home-close-menu">
+              <button class="navbar-toggle" id="navbarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </div>
           </header>
-
-
-        
+          
+         
         </div>
         <section class="mx-5">
-        <div class="home-hero">
-          <div class="heroContainer-home-hero1 ">
-            <div class="home-container01">
-              <!-- <h1 style = " width =50% ;float :right;" class="home-hero-heading heading1">Find Jobs Near You</h1> -->
-            <div>
-              <!-- <img  class ="logo" src="logo.PNG" style="width: 38%; float: right;" alt="Your image description"> -->
-              <!-- <h1 style="width: 50%; float: right;" class="home-hero-heading heading1">Find Jobs Near You</h1> -->
-              <div class="home-hero-sub-heading bodyLarge mt-5">
-              
-                  <!-- <div style="width: 50%; margin : 0 auto;"> -->
+          <div class="home-hero">
+            <div class="heroContainer-home-hero1 ">
+              <div class="home-container01">
+                <!-- <h1 style = " width =50% ;float :right;" class="home-hero-heading heading1">Find Jobs Near You</h1> -->
+                <div>
+                  <!-- <img  class ="logo" src="logo.PNG" style="width: 38%; float: right;" alt="Your image description"> -->
+                  <!-- <h1 style="width: 50%; float: right;" class="home-hero-heading heading1">Find Jobs Near You</h1> -->
+                  <div class="home-hero-sub-heading bodyLarge mt-5">
+
+                    <!-- <div style="width: 50%; margin : 0 auto;"> -->
                     <div class="home-left-content">
-                  
-                      <h1 class="home-heading-1" >Connecting you with local job opportunities</h1>
-                    
-                    
-                    
-                  
-                    <!-- <h1 class="home-banner-heading heading2">Welcome to Helping hands</h1> -->
+
+                      <h1 class="home-heading-1">Connecting you with local job opportunities</h1>
 
 
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                      <div class="col">
-                        <div class="card  border-primary h-100 ">
-                         
-                          <div class="card-body ">
-                            <!-- <h5 class="card-title">About Us</h5> -->
-                            <p class="card-text ">A platform dedicated to helping individuals in need find employment opportunities nearby. </p>
+
+
+                      <!-- <h1 class="home-banner-heading heading2">Welcome to Helping hands</h1> -->
+
+
+                      <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                          <div class="card  border-primary h-100 ">
+
+                            <div class="card-body ">
+                              <!-- <h5 class="card-title">About Us</h5> -->
+                              <p class="card-text ">A platform dedicated to helping individuals in need find employment
+                                opportunities nearby. </p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col">
-                        <div class="card  border-primary h-100">
-                        
-                          <div class="card-body">
-                            <!-- <h5 class="card-title">Flexible</h5> -->
-                            <p class="card-text">Whether you are looking for full-time, part-time, or temporary work, we are here to assist you. </p>
+                        <div class="col">
+                          <div class="card  border-primary h-100">
+
+                            <div class="card-body">
+                              <!-- <h5 class="card-title">Flexible</h5> -->
+                              <p class="card-text">Whether you are looking for full-time, part-time, or temporary work,
+                                we are here to assist you. </p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col ">
-                        <div class="card  border-primary h-100">
-                          
-                          <div class="card-body">
-                            <!-- <h5 class="card-title">Mission</h5> -->
-                            <p class="card-text">Our mission is to bridge the gap between job seekers and employers.</p>
+                        <div class="col ">
+                          <div class="card  border-primary h-100">
+
+                            <div class="card-body">
+                              <!-- <h5 class="card-title">Mission</h5> -->
+                              <p class="card-text">Our mission is to bridge the gap between job seekers and employers.
+                              </p>
+                            </div>
                           </div>
                         </div>
+
                       </div>
-                     
+
+                      <div class="home-btn-group mt-5">
+                        <button class="buttonFilled " onclick="window.location.href='green.html'">Start your journey now
+                          !</button>
+                        <!-- <button class="buttonFlat">Location→</button> -->
+                      </div>
+
                     </div>
 
-                    <div class="home-btn-group mt-5">
-                      <button class="buttonFilled " onclick="window.location.href='green.html'">Start your journey now !</button>
-                      <!-- <button class="buttonFlat">Location→</button> -->
+                    <div class="home-img img-fluid">
+
+                      <img src="images/home-img-2.jpg" alt="">
+
+
                     </div>
-                  
-                  </div>
 
-                  <div class="home-img img-fluid">
 
-                    <img src="images/home-img-2.jpg" alt="">
-      
-      
-                  </div>
-
-                  
 
                   </div>
-                 
-                  </div>
-                </div>
+
                 </div>
               </div>
+            </div>
+          </div>
 
 
-    
-          
-            
-    
-<h3 class="feature-card-text heading3">
-  
-                  <!-- <span>
+
+
+
+
+          <h3 class="feature-card-text heading3">
+
+            <!-- <span>
                     
                     <span>Connecting you with local job opportunities</span>
                     <span></span>
@@ -259,135 +303,135 @@
                   mission is to empower the community by bridging the gap
                   between job seekers and employers.
                 </span> -->
-                <span>
-                  <span>
-                    
-                  </span>
-                 
-                </span>
-              </span>
-             
-            </div>
+            <span>
+              <span>
 
-           
-          </div>
-        </div>
-        <div class="home-features">
-          <div class="featuresContainer">
-            <div class="home-features1">
-              <div class="home-container02">
-                <!-- <span class="overline">
+              </span>
+
+            </span>
+            </span>
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="home-features">
+    <div class="featuresContainer">
+      <div class="home-features1">
+        <div class="home-container02">
+          <!-- <span class="overline">
                   <span id="about">About</span>
                   <br />
                 </span> -->
-                <h2  id="about" class="home-features-heading heading2">
-                  Empowering You to Find Opportunities
-                </h2>
-                <span class="home-features-sub-heading bodyLarge">
-                  <span>
-                    <span>
-                      <span>
-                        Discover the features that can help you on your journey
-                        to find meaningful employment
-                      </span>
-                      <span></span>
-                    </span>
-                    <span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </span>
-                  <span>
-                    <span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                    <span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </span>
+          <h2 id="about" class="home-features-heading heading2">
+            Empowering You to Find Opportunities
+          </h2>
+          <span class="home-features-sub-heading bodyLarge">
+            <span>
+              <span>
+                <span>
+                  Discover the features that can help you on your journey
+                  to find meaningful employment
                 </span>
-              </div>
-              <div class="home-container03">
-                <div class="featuresCard feature-card-feature-card">
-                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
-                    <path
-                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
-                    ></path>
-                  </svg>
-                  <div class="feature-card-container">
-                    <h3 class="feature-card-text heading3">
-                      <span>Job Listings</span>
-                    </h3>
-                    <span class="bodySmall">
-                      <span>
-                        Access to a variety of job listings in your area
-                      </span>
-                    </span>
-                  </div>
-                </div>
-                <div class="featuresCard feature-card-feature-card">
-                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
-                    <path
-                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
-                    ></path>
-                  </svg>
-                  <div class="feature-card-container">
-                    <h3 class="feature-card-text heading3">
-                      <span>Skill Development</span>
-                    </h3>
-                    <span class="bodySmall">
-                      <span>
-                        Opportunities for skill development and training
-                        programs
-                      </span>
-                    </span>
-                  </div>
-                </div>
-                <div class="featuresCard feature-card-feature-card">
-                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
-                    <path
-                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
-                    ></path>
-                  </svg>
-                  <div class="feature-card-container">
-                    <h3 class="feature-card-text heading3">
-                      <span>Community Support</span>
-                    </h3>
-                    <span class="bodySmall">
-                      <span>
-                        Connect with a supportive community of job seekers and
-                        mentors
-                      </span>
-                    </span>
-                  </div>
-                </div>
-                <div class="featuresCard feature-card-feature-card">
-                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
-                    <path
-                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
-                    ></path>
-                  </svg>
-                  <div class="feature-card-container">
-                    <h3 class="feature-card-text heading3">
-                      <span>Resource Center</span>
-                    </h3>
-                    <span class="bodySmall">
-                      <span>
-                        Access to resources such as resume building tips and
-                        interview preparation
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
+                <span></span>
+              </span>
+              <span>
+                <span></span>
+                <span></span>
+              </span>
+            </span>
+            <span>
+              <span>
+                <span></span>
+                <span></span>
+              </span>
+              <span>
+                <span></span>
+                <span></span>
+              </span>
+            </span>
+          </span>
+        </div>
+        <div class="home-container03">
+          <div class="featuresCard feature-card-feature-card">
+            <svg viewBox="0 0 1024 1024" class="featuresIcon">
+              <path
+                d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z">
+              </path>
+            </svg>
+            <div class="feature-card-container">
+              <h3 class="feature-card-text heading3">
+                <span>Job Listings</span>
+              </h3>
+              <span class="bodySmall">
+                <span>
+                  Access to a variety of job listings in your area
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="featuresCard feature-card-feature-card">
+            <svg viewBox="0 0 1024 1024" class="featuresIcon">
+              <path
+                d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z">
+              </path>
+            </svg>
+            <div class="feature-card-container">
+              <h3 class="feature-card-text heading3">
+                <span>Skill Development</span>
+              </h3>
+              <span class="bodySmall">
+                <span>
+                  Opportunities for skill development and training
+                  programs
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="featuresCard feature-card-feature-card">
+            <svg viewBox="0 0 1024 1024" class="featuresIcon">
+              <path
+                d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z">
+              </path>
+            </svg>
+            <div class="feature-card-container">
+              <h3 class="feature-card-text heading3">
+                <span>Community Support</span>
+              </h3>
+              <span class="bodySmall">
+                <span>
+                  Connect with a supportive community of job seekers and
+                  mentors
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="featuresCard feature-card-feature-card">
+            <svg viewBox="0 0 1024 1024" class="featuresIcon">
+              <path
+                d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z">
+              </path>
+            </svg>
+            <div class="feature-card-container">
+              <h3 class="feature-card-text heading3">
+                <span>Resource Center</span>
+              </h3>
+              <span class="bodySmall">
+                <span>
+                  Access to resources such as resume building tips and
+                  interview preparation
+                </span>
+              </span>
             </div>
           </div>
         </div>
-        <br>
-         <!--blog post section-->
-         <!-- <div class="swiper-container">
+      </div>
+    </div>
+  </div>
+  <br>
+  <!--blog post section-->
+  <!-- <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="./assets/slider/img1.jpg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="./assets/slider/img2.jpg" class="img-fluid" alt=""></div>
@@ -407,7 +451,7 @@
 
 </div> -->
 
-        <!-- <div class="home-pricing">
+  <!-- <div class="home-pricing">
           <div class="pricingContainer">
             <div class="home-container04">
               <span class="overline">
@@ -561,26 +605,26 @@
             </div>
           </div>
         </div> -->
-        <div class="home-banner">
-          <div class="home-banner1 bannerContainer">
-            <!-- <h1 class="home-banner-heading heading2">Welcome to Helping hands</h1> -->
+  <div class="home-banner">
+    <div class="home-banner1 bannerContainer">
+      <!-- <h1 class="home-banner-heading heading2">Welcome to Helping hands</h1> -->
 
-    
-          
-            
-    
 
-          
-          
-            
-    
 
-          <h2 class="home-text85 heading2">Common questions</h2>
-  
-            <span class="home-banner-sub-heading bodySmall">
-              <span>
-                <span>
-                  <!-- <span>
+
+
+
+
+
+
+
+
+      <h2 class="home-text85 heading2">Common questions</h2>
+
+      <span class="home-banner-sub-heading bodySmall">
+        <span>
+          <span>
+            <!-- <span>
                     Job Connect is a platform dedicated to helping individuals
                     in need find employment opportunities nearby. Whether you
                     are looking for full-time, part-time, or temporary work, we
@@ -588,101 +632,111 @@
                     mission is to empower the community by bridging the gap
                     between job seekers and employers.
                   </span> -->
-                  <span></span>
-                </span>
-                <span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </span>
-              <span>
-                <span>
-                  <span></span>
-                  <span></span>
-                </span>
-                <span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </span>
-            </span>
-            <!-- <button class="buttonFilled">Learn More</button> -->
+            <span></span>
+          </span>
+          <span>
+            <span></span>
+            <span></span>
+          </span>
+        </span>
+        <span>
+          <span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>
+            <span></span>
+            <span></span>
+          </span>
+        </span>
+      </span>
+      <!-- <button class="buttonFilled">Learn More</button> -->
+    </div>
+  </div>
+  <div class="home-faq">
+
+
+    <div class="accordion mb-5 " id="accordionExample">
+      <div class="accordion-item ">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="false" aria-controls="collapseOne">
+
+            How can I search for jobs on this website?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p style="font-size: 1rem;">You can search for jobs by entering keywords in the search bar and filtering the
+              results based on your preferences.</p>
           </div>
         </div>
-       <div class="home-faq">
-
-
-        <div class="accordion mb-5 " id="accordionExample">
-          <div class="accordion-item ">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-
-How can I search for jobs on this website? 
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <p style="font-size: 1rem;">You can search for jobs by entering keywords in the search bar and filtering the results based on your preferences.</p> 
-              </div>
-            </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Are there any fees for using this platform?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p style="font-size: 1rem;">No, our platform is completely free for job seekers. There are no hidden charges
+              or fees.</p>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Are there any fees for using this platform?
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <p  style="font-size: 1rem;">No, our platform is completely free for job seekers. There are no hidden charges or fees.</p> 
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                How can I contact employers through this website?
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <p  style="font-size: 1rem;">You can contact employers by sending them a message through our messaging system or by using the contact information provided in the job listing.</p> 
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header ">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                Can I receive job alerts for new postings?
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body ">
-                <p  style="font-size: 1rem;">Yes, you can set up job alerts based on your preferences. You will receive notifications when new jobs matching your criteria are posted.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                Is my personal information secure on this platform?
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <p style="font-size: 1rem;">Yes, we take data privacy and security seriously. Your personal information is encrypted and protected to ensure confidentiality.
-              </div>
-            </div>
-          </div>
-
-         
         </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            How can I contact employers through this website?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p style="font-size: 1rem;">You can contact employers by sending them a message through our messaging system
+              or by using the contact information provided in the job listing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header ">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+            Can I receive job alerts for new postings?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body ">
+            <p style="font-size: 1rem;">Yes, you can set up job alerts based on your preferences. You will receive
+              notifications when new jobs matching your criteria are posted.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+            Is my personal information secure on this platform?
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p style="font-size: 1rem;">Yes, we take data privacy and security seriously. Your personal information is
+              encrypted and protected to ensure confidentiality.
+          </div>
+        </div>
+      </div>
+
+
+    </div>
 
 
 
-         <!--   <div class="faqContainer">
+    <!--   <div class="faqContainer">
             <div class="home-faq1">
               <div class="home-container29">
                 <span class="overline">
@@ -763,10 +817,10 @@ How can I search for jobs on this website?
               </div>
             </div>
           </div> -->
-        </div>
-        
-        <!-- <div class="home-footer"> -->
-          <!-- <footer class="footerContainer home-footer1">
+  </div>
+
+  <!-- <div class="home-footer"> -->
+  <!-- <footer class="footerContainer home-footer1">
             <div class="home-container31">
               <span class="logo">WORKSOURCE</span>
 
@@ -784,7 +838,7 @@ How can I search for jobs on this website?
                 <span class="home-nav521 bodySmall">Contact Us</span>
               </nav>
             </div> -->
-            <!-- <div class="home-separator"></div>
+  <!-- <div class="home-separator"></div>
             <div class="home-container32">
               <span class="bodySmall home-text89">
                 © 2023 myCompany, All Rights Reserved.
@@ -802,7 +856,7 @@ How can I search for jobs on this website?
                   viewBox="0 0 950.8571428571428 1024"
                   class="home-icon10 socialIcons"
                 > -->
-                  <!-- <path
+  <!-- <path
                     d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
                   ></path></svg
                 ><svg
@@ -838,157 +892,135 @@ How can I search for jobs on this website?
 
   <section class="review" id="review">
 
-      <h1 class="heading"> Customer Reviews </h1>
+    <h1 class="heading"> Customer Reviews </h1>
 
-      <div class="swiper review-slider" data-aos="zoom-in">
+    <div class="swiper review-slider" data-aos="zoom-in">
 
-          <div class="swiper-wrapper">
+      <div class="swiper-wrapper">
 
-              <div class="swiper-slide slide">
-                  <img src="img/pic-1.png" alt="">
-                  <h3>Noah Lee</h3>
-                  <p>The website is very intuitive and easy to navigate. I found the job listings quickly and appreciated the clean design.</p>
-                  <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                  </div>
-              </div>
-
-              <div class="swiper-slide slide">
-                  <img src="img/pic-2.png" alt="">
-                  <h3>Sophia Rossi</h3>
-                  <p>Setting up job alerts was straightforward, and the notifications helped me stay updated with new opportunities.</p>
-                  <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                  </div>
-              </div>
-
-              <div class="swiper-slide slide">
-                  <img src="img/pic-3.png" alt="">
-                  <h3>Olivia Davis</h3>
-                  <p>I'm impressed with the platform's commitment to data security. I feel confident that my personal information is protected</p>
-                  <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-full-alt"></i>
-                  </div>
-              </div>
-
-              <div class="swiper-slide slide">
-                  <img src="img/pic-4.png" alt="">
-                  <h3>Emma Brown</h3>
-                  <p>Setting up job alerts was straightforward, and the notifications helped me stay updated with new opportunities.</p>
-                  <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                  </div>
-              </div>
-
+        <div class="swiper-slide slide">
+          <img src="img/pic-1.png" alt="">
+          <h3>Noah Lee</h3>
+          <p>The website is very intuitive and easy to navigate. I found the job listings quickly and appreciated the
+            clean design.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
           </div>
+        </div>
 
-          <div class="swiper-pagination"></div>
+        <div class="swiper-slide slide">
+          <img src="img/pic-2.png" alt="">
+          <h3>Sophia Rossi</h3>
+          <p>Setting up job alerts was straightforward, and the notifications helped me stay updated with new
+            opportunities.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="img/pic-3.png" alt="">
+          <h3>Olivia Davis</h3>
+          <p>I'm impressed with the platform's commitment to data security. I feel confident that my personal
+            information is protected</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-full-alt"></i>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="img/pic-4.png" alt="">
+          <h3>Emma Brown</h3>
+          <p>Setting up job alerts was straightforward, and the notifications helped me stay updated with new
+            opportunities.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
 
       </div>
+
+      <div class="swiper-pagination"></div>
+
+    </div>
 
   </section>
-  <footer class="container py-4 py-md-5 px-4 px-md-3">
-    <div class="row d-flex justify-content-center align-items-center text-center">
-      <div class="col-md-6 mb-3">
-        <form>
-          <h5>Subscribe to our newsletter</h5>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <h2>Helping Hands</h2>
+          <p>Connecting individuals with local job opportunities, offering job listings, skill development programs, and resources for preparation.</p>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Subscribe to our newsletter</h3>
           <p>Monthly digest of what's new and exciting from us.</p>
-          <div class="d-flex gap-2 justify-content-center align-items-center">
-            <input id="newsletter1" type="text" class="form-control w-full" placeholder="Email address">
-            <button class="btn btn-primary" type="button">Subscribe</button>
-          </div>
-        </form>
+          <form class="footer-form">
+            <input type="email" placeholder="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-link-group">
+          <h4>Home</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+          </ul>
+        </div>
+        <div class="footer-link-group">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#">Our Contributors</a></li>
+          </ul>
+        </div>
+        <div class="footer-link-group">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-link-group">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Licensing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2024 Helping-Hands, Inc. All rights reserved.</p>
       </div>
     </div>
-    <div class="row mt-5">
-      <div class="col-md-4 mb-3">
-        <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none footer-title"
-          href="/" aria-label="Helping-Hands">
-          Helping-Hands
-        </a>
-        <div class="vs">
-        <ul class="list-unstyled small">
-          </li>Helping Hands connects individuals with local job opportunities, offering job listings, skill development programs, and resources for preparation. </li>
-        </ul>
-        </div>
-      </div>
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Home</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#home-section" class="nav-link p-0 text-body-secondary">Home</a></li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-md-2 mb-3">
-        <h5>About</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#about-us-section" class="nav-link p-0 text-body-secondary">About</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Contributors</a></li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Support</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#faq" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Legal</h5>
-        <ul class="nav flex-column">
-
-          
-          <li class="nav-item mb-2"><a href="privacy-policy.html" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
-
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Licensing</a></li>
-        </ul>
-      </div>
-      
-    </div>
-    <div class="foot">
-      <div class="icons">
-        <div class="linkedin">
-        <a href="https://www.linkedin.com/in/mastan-sayyad-126904223/"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-        <div class="github">
-         <a href="https://github.com/MastanSayyad"><i class="fa-brands fa-github"></i></a>  
-        </div>
-        <div class="instagram">
-         <a href=""><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <div class="twitter">
-         <a href=""><i class="fa fa-twitter"></i></a>
-        </div>
-    </div>
-
-    </div>
-  
-  <div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top">
-    <p>© 2024 Helping-Hands, Inc. All rights reserved.</p>
+  </footer>
   </div>
-</footer>
-  </div>
-</section>
-    <!-- <footer class="contact-us">
+  </section>
+  <!-- <footer class="contact-us">
       <h2>Contact Us</h2>
       <ul>
         <li><a href="mailto:example@example.com">Email : helpinghands@gmail.com</a></li>
@@ -996,7 +1028,7 @@ How can I search for jobs on this website?
         <li><a href="#"></a></li>
       </ul>
     </footer> -->
-    <!-- <script
+  <!-- <script
        data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
 
@@ -1005,65 +1037,68 @@ How can I search for jobs on this website?
     
   
     ></script>  -->
-    <script src="script.js"></script>
+  <script src="/script.js"></script>
 
-      
-       
-   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-        function googleTranslateElementInit(){
-            new google.translate.TranslateElement( 
-                {pageLanguage: 'en'},
-                'google_translate_element'
-            );
-        }
-//         function openModal() {
 
-// var popupWindow = window.open('green.html', 'newwindow', 'width=600, height=400');
-// popupWindow.opener = window;}
 
-    </script>
- <script>
-  window.addEventListener('mouseover', initLandbot, { once: true });
-  window.addEventListener('touchstart', initLandbot, { once: true });
-  var myLandbot;
-  function initLandbot() {
-    if (!myLandbot) {
-      var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
-      s.addEventListener('load', function() {
-        var myLandbot = new Landbot.Livechat({
-          configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2197812-VMY2ETBP6VVY6TSZ/index.json',
-        });
-      });
-      s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-      var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en' },
+        'google_translate_element'
+      );
     }
-  }
-  //Loader Script
-  document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
+    //         function openModal() {
+
+    // var popupWindow = window.open('green.html', 'newwindow', 'width=600, height=400');
+    // popupWindow.opener = window;}
+
+  </script>
+  <script>
+    window.addEventListener('mouseover', initLandbot, { once: true });
+    window.addEventListener('touchstart', initLandbot, { once: true });
+    var myLandbot;
+    function initLandbot() {
+      if (!myLandbot) {
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+        s.addEventListener('load', function () {
+          var myLandbot = new Landbot.Livechat({
+            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2197812-VMY2ETBP6VVY6TSZ/index.json',
+          });
+        });
+        s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+    }
+    //Loader Script
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
         const loaderContainer = document.getElementById('loader-container');
         const content = document.getElementById('content');
 
         loaderContainer.style.display = 'none';
         content.style.display = 'block';
-    }, 1000);
-});
+      }, 1000);
+    });
 
 
   </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<!-- FontAwesome for icons -->
-                <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-                <script src="scripts.js"></script>
-        
-            <!-- Link to JS -->
-            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        
-            <script src="main.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+
+  <!-- Link to JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="/main.js"></script>
+</body>
+
 </html>
